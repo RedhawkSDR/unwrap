@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This file is protected by Copyright. Please refer to the COPYRIGHT file distributed with this 
+source distribution.
+
+This file is part of REDHAWK Basic Components unwrap.
+
+REDHAWK Basic Components HardLimit is free software: you can redistribute it and/or modify it under the terms of 
+the GNU Lesser General Public License as published by the Free Software Foundation, either 
+version 3 of the License, or (at your option) any later version.
+
+REDHAWK Basic Components HardLimit is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+PURPOSE.  See the GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License along with this 
+program.  If not, see http://www.gnu.org/licenses/.
+-->
+<!DOCTYPE properties PUBLIC "-//JTRS//DTD SCA V2.2.2 PRF//EN" "properties.dtd">
+<properties>
+  <simple id="Val1" mode="readwrite" type="float">
+    <description>Boundary for unwrapping.</description>
+    <value>-3.1415926535897931</value>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+  <simple id="Val2" mode="readwrite" type="float">
+    <description>Boundary for unwrapping.</description>
+    <value>3.1415926535897931</value>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+  <simple id="cxOperator" mode="readwrite" type="string">
+    <description>The operation to use to map complex values to real values so that they can be unwrapped.  For doing phase unwrapping - this should be set as &quot;arg&quot;</description>
+    <value>phase</value>
+    <enumerations>
+      <enumeration label="phase" value="phase"/>
+      <enumeration label="abs" value="abs"/>
+      <enumeration label="real" value="real"/>
+      <enumeration label="imag" value="imag"/>
+      <enumeration label="norm" value="norm"/>
+    </enumerations>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+</properties>
