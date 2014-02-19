@@ -26,13 +26,13 @@ program.  If not, see http://www.gnu.org/licenses/.
 
 The standard use case is for phase unmapping.  Phase of a complex number is computed using arg, or atan2.  This produces outputs in the range of [-pi,pi].  However the solution of the arctangent is not unique.  arg(theta) = arg(theta+2pi*x) for any integer x.  
 
-Unwrap seeks to adress this ambiguity by using a differencing algorthim.  Given the default properties of +/-pi, any value x between +/- pi also could be mapped to x+2pi or x -2pi.  Unwrap uses the previous value to see which of these three values is the closest and selects the output acordingly.  Thus a series like, [.85pi,.95pi,-.05pi, -.15pi] is &quot;unwrapped&quot; at the pi boundary and mapped to the output [.85pi,.95pi,1.05pi, 1.15pi]
+Unwrap seeks to adress this ambiguity by using a differencing algorthim.  Given the default properties of +/-pi, any value x between +/- pi also could be mapped to x+2pi or x -2pi.  Unwrap uses the previous value to see which of these three values is the closest and selects the output accordingly.  Thus a series like [.85pi, .95pi, -.05pi, -.15pi] is &quot;unwrapped&quot; at the pi boundary and mapped to the output [.85pi, .95pi, 1.05pi, 1.15pi].
 
-NOTE - the algorthim used to dothe unmapping fails if the phase jumps are greater then abs(Val1-Val2)/2.0.  The &quot;unwrap&quot; algorthim chooses the &quot;closest&quot; value to the last value.  If the &quot;desired value&quot; is not the closest one this unwrapping techinque breaks down and a different unwrapping algorthim using additional apriori knowledge of the data set should be used instead.
+NOTE - the algorthim used to do the unmapping fails if the phase jumps are greater then abs(Val1-Val2)/2.0.  The &quot;unwrap&quot; algorithm chooses the &quot;closest&quot; value to the last value.  If the &quot;desired value&quot; is not the closest one this unwrapping techinque breaks down and a different unwrapping algorithm using additional apriori knowledge of the data set should be used instead.
 
 Complex data is transformed to real data prior to unwrapping using the transformation defined by the property cxOperator.
 
-Finally - if the input is NOT limited to the range [Val1, Val2], then the value is mapped to its prinicple value between [Val1, Val2] and then remapped to an output value based upon the differencing algorthim.  This may result in unintuitive behavior.</description>
+Finally - if the input is NOT limited to the range [Val1, Val2], then the value is mapped to its prinicpal value between [Val1, Val2] and then remapped to an output value based upon the differencing algorthim.  This may result in unintuitive behavior.</description>
   <propertyfile type="PRF">
     <localfile name="unwrap.prf.xml"/>
   </propertyfile>
