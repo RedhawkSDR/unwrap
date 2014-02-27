@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 <!-- 
-     This file is protected by Copyright. Please refer to the COPYRIGHT file distributed with this 
-     source distribution.
+          This file is protected by Copyright. Please refer to the COPYRIGHT file distributed with this 
+               source distribution.
 
 This file is part of REDHAWK Basic Components unwrap.
 
@@ -16,7 +17,6 @@ PURPOSE.  See the GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License along with this 
 program.  If not, see http://www.gnu.org/licenses/.
 -->
-<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="cdt.managedbuild.config.gnu.exe.debug.1925168222">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.exe.debug.1925168222" moduleId="org.eclipse.cdt.core.settings" name="Debug">
