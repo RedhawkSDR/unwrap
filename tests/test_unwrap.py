@@ -177,7 +177,7 @@ class ComponentTests(ossie.utils.testing.ScaComponentTestCase):
         self.cxTest(-1, -3,5, 'phase')
     
     def realTest(self, stepVal, initialVal, numPushes=1):
-        """create real linear data  clipped between Val1 and Val2.  Push threw the system and verify it is linear with no clipping
+        """create real linear data  clipped between Val1 and Val2.  Push through the system and verify it is linear with no clipping
            (IE - the data has been unwrapped)
         """
         inData=[]
@@ -200,7 +200,7 @@ class ComponentTests(ossie.utils.testing.ScaComponentTestCase):
         assert(all([abs(x-stepVal)<.01 for x in  diff]))
 
     def cxTest(self, stepValOut, initialVal, numPushes=1,cxMap='real'):
-        """create complex data Push threw the system and verify it is linear with no clipping
+        """create complex data, push through the system and verify it is linear with no clipping
            (IE - the data has been unwrapped)
            for cxMap "real" - the data is real data with muxed 0s and is truncated betwen minVal and maxVal
            for cxMap "phase" - the data is a complex phasor (norm 1) which rotates with stepValOut.

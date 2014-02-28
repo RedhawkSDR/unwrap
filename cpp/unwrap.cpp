@@ -105,8 +105,8 @@ int unwrap_i::serviceFunction()
 	}
 	if (tmp->inputQueueFlushed)
 	{
-		LOG_WARN(unwrap_i, "input Q flushed - data has been thrown on the floor.  flushing internal buffers");
-		//flush all our processor states if the Q flushed
+		LOG_WARN(unwrap_i, "input queue flushed - data has been thrown on the floor.  flushing internal buffers");
+		//flush all our processor states if the queue flushed
 	    isComplex.clear();	//data structure to tell which streams are complex
 	    last.clear();		//data structure to hold the last value for each stream
 	}
