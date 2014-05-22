@@ -38,9 +38,9 @@ unwrap_i::unwrap_i(const char *uuid, const char *label) :
 	mapCxFunc();
 	updateValues();
 	//update our property callbacks
-	setPropertyChangeListener("Val1", this, &unwrap_i::toggleValsChanged);
-	setPropertyChangeListener("Val2", this, &unwrap_i::toggleValsChanged);
-	setPropertyChangeListener("cxOperator", this, &unwrap_i::toggleUpdateCxOperator);
+	addPropertyChangeListener("Val1", this, &unwrap_i::toggleValsChanged);
+	addPropertyChangeListener("Val2", this, &unwrap_i::toggleValsChanged);
+	addPropertyChangeListener("cxOperator", this, &unwrap_i::toggleUpdateCxOperator);
 }
 
 unwrap_i::~unwrap_i()
@@ -83,12 +83,12 @@ void unwrap_i::updateValues()
 	newValues = false;
 }
 
-void unwrap_i::toggleValsChanged(const std::string&)
+void unwrap_i::toggleValsChanged(const float* newVal, const float* oldVal)
 {
 	//property callback - tell the service function to update its newValues nextLoop
 	newValues=true;
 }
-void unwrap_i::toggleUpdateCxOperator(const std::string&)
+void unwrap_i::toggleUpdateCxOperator(const std::string* oldVal, const std::string* newVal)
 {
 	//property callback - tell the service function to check for a new complex funtion
 	newCxFunc=true;

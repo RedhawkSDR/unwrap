@@ -39,8 +39,8 @@ class unwrap_i : public unwrap_base
         void mapCxFunc();
         void updateValues();
 
-        void toggleValsChanged(const std::string&);
-        void toggleUpdateCxOperator(const std::string&);
+        void toggleValsChanged(const float* newVal, const float* oldVal);
+        void toggleUpdateCxOperator(const std::string* oldVal, const std::string* newVal);
 
         std::map<std::string, bool> isComplex;	//data structure to tell which streams are complex
         std::map<std::string, float> last;		//data structure to hold the last value for each stream
